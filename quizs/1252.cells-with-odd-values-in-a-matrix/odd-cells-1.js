@@ -5,7 +5,7 @@
  * @return {number}
  */
 const oddCells = function (m, n, indices) {
-  // 按提议要求暴力求解
+  // 按题意要求暴力求解
   // 构建 m * n 矩阵
   const matrix = new Array(m).fill(0).map(() => new Array(n).fill(0));
 
@@ -30,10 +30,10 @@ const oddCells = function (m, n, indices) {
   for (let j = 0; j < matrix.length; ++j) {
     const curRow = matrix[j];
     for (let k = 0; k < curRow.length; ++k) {
-      matrix[j][k] & 1 === 1 && ans++;
+      (matrix[j][k] & 1) === 1 && ans++;
     }
   }
   return ans;
 };
 
-console.log(oddCells(2, 3, [[0, 1]]));
+console.log(oddCells(2, 3, [[0, 1], [1, 1]]));
