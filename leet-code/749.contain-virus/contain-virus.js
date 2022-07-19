@@ -124,7 +124,9 @@ const containVirus = function (isInfected) {
 const getHash = (x, y) => {
   return (x << 16) ^ y;
 };
-
+console.log(5 << 16);
+console.log(5 * 2 ** 16);
+console.log(2 ^ 2);
 // 简单 hash 和 逆hash 运算
 // const val = getHash(1, 4);
 // console.log(val);
@@ -132,4 +134,4 @@ const getHash = (x, y) => {
 // const y = val & ((1 << 16) - 1);
 // console.log(x, y);
 
-console.log(containVirus(testCase));
+// console.log(containVirus(testCase));
